@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('fond-kawaii-jxr.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #4a4a4a;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+body.loaded {
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.intro-title {
+  font-size: 3rem;
+  color: #ff5ca5;
+}
+.intro-subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.intro-container {
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  padding: 30px;
+  border-radius: 20px;
+}
+.bouton-kawaii {
+  background-color: #ff7cb9;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.bouton-kawaii:hover {
+  transform: scale(1.05);
+  background-color: #ff94c4;
+}
+.page {
+  background-color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+h1, h2 {
+  animation: floatIn 0.8s ease forwards;
+  opacity: 0;
+}
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+input, select, textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffcce6;
+}
+button {
+  background-color: #ff5ca5;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: #ff94c4;
+}
+#mute-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  padding: 8px;
+  background: #fff0f7;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #ffe6f2;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-right: 2px solid #ffb6d9;
+}
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ff5ca5;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  background-color: #ffd6eb;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: #ff5ca5;
+  cursor: pointer;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ff94c4;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 1000;
+}

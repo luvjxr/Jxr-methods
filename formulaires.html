@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulaires - JXR Method</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="https://files.catbox.moe/cbmeqd.mp3" type="audio/mp3" />
+  </audio>
+  <button id="mute-btn">🔊</button>
+
+  <div id="sidebar" class="sidebar">
+    <button class="closebtn" onclick="closeNav()">×</button>
+    <a href="index.html">🏠 Accueil</a>
+    <a href="concept.html">📘 Concept</a>
+    <a href="equipe.html">👥 Équipe</a>
+    <a href="formulaires.html">📝 Formulaires</a>
+  </div>
+  <button class="openbtn" onclick="openNav()">☰ Menu</button>
+
+  <main class="page">
+    <h1>Formulaire de Contact</h1>
+    <form class="formulaire">
+      <input type="text" placeholder="Ton pseudo" required />
+      <input type="email" placeholder="Ton email" required />
+      <select required>
+        <option value="">Tu veux...</option>
+        <option value="team">Rejoindre l’équipe</option>
+        <option value="coach">Coaching personnalisé</option>
+        <option value="boost">Demander un boost</option>
+      </select>
+      <textarea placeholder="Détails..."></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
